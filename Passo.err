@@ -1,8 +1,8 @@
+>>> Warning 202 "Passo.c" Line 8(17,20): Variable never used:   i_1
 >>> Warning 202 "Passo.c" Line 8(21,22): Variable never used:   j
 >>> Warning 202 "Passo.c" Line 9(7,16): Variable never used:   ad_antigo
->>> Warning 202 "Passo.c" Line 9(18,26): Variable never used:   ad_atual
->>> Warning 202 "Passo.c" Line 14(6,7): Variable never used:   y
->>> Warning 202 "Passo.c" Line 15(14,23): Variable never used:   distancia
-      Memory usage:   ROM=16%      RAM=12% - 18%
+>>> Warning 202 "Passo.c" Line 15(6,7): Variable never used:   y
+>>> Warning 202 "Passo.c" Line 16(14,23): Variable never used:   distancia
+      Memory usage:   ROM=18%      RAM=11% - 16%
       0 Errors,  5 Warnings.
 Build Successful.

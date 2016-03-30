@@ -10,6 +10,7 @@ int16 ad_antigo, ad_atual, total_passos, posicoes_na_escala;
 signed int16 pos_atual =0;
 int16 passos_dados =0;
 int16 ultimaRPM = 0;
+int16 rpm=0;
 float passos_por_posicao;
 int8 y;
 signed int16 distancia;
@@ -22,11 +23,14 @@ char motor[4]=
      0b1001, //PASSO4      
   };  
  
-int16 rpms[4]={9,35,9,20};
+//int16 rpms[5]={9,35,9,20,65};
    
   
   
 void avanca(int16 qtdPassos){
+   if(qtdPassos>total_passos){
+      qtdPassos=total_passos+1; //Estabelecendo o limite máximo
+   }
    int16 passos=qtdPassos-passos_dados;
    passos_dados=qtdPassos;
    for (i=0;i<passos;i++){
@@ -35,12 +39,19 @@ void avanca(int16 qtdPassos){
          pos_atual = 0;
       } 
       output_b(motor[pos_atual]);            
-      delay_ms (5);
+      delay_ms (3);
    }   
 }
 
 void retrocede(int16 qtdPassos){
    int16 passos=passos_dados-qtdPassos;
+   passos_dados=qtdPassos;   
+   
+   if(qtdPassos>passos_dados){
+      passos= passos_dados;
+      passos_dados = 0;
+   }
+   
    passos_dados=qtdPassos;   
    for (i=0;i<passos;i++){      
       pos_atual--;  
@@ -48,7 +59,7 @@ void retrocede(int16 qtdPassos){
          pos_atual = 3;
       } 
       output_b(motor[pos_atual]);              
-      delay_ms (5);
+      delay_ms (3);
    }        
 }
 
@@ -84,10 +95,28 @@ void main ()
    printf(lcd_putc,"\f0 RPM");
    
         
-   for (i_1=0;i_1<4;i_1++){     
+ /*  for (i_1=0;i_1<5;i_1++){     
       delay_us (300);
       setaRPM(rpms[i_1]);
-   }
+   }*/
+
+  
+  while(true){
+
+      ad_atual = read_adc();
+      
+      rpm = ad_atual/15;
+      
+      setaRPM(rpm);
+     
+      printf(lcd_putc,"\f%lu RPM  ad_atual: %lu",rpm*100, ad_atual );
+     
+     
+     delay_ms (20);
+     
+  }
+  
+}
 
   /*
   while(true){
@@ -134,7 +163,4 @@ void main ()
      
   }
   */
-}
-
-
 

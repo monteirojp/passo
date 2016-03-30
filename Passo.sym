@@ -1,0 +1,159 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     i
+022     i_1
+023     j
+024-025 ad_antigo
+026-027 ad_atual
+028-029 total_passos
+02A-02B posicoes_na_escala
+02C-02D pos_atual
+02E-02F passos_dados
+030-031 ultimaRPM
+032-035 passos_por_posicao
+036     y
+037-038 distancia
+039-03C motor
+03D-044 rpms
+045     lcd_init.i
+045     MAIN.@SCRATCH1
+045     @PSTRINGC7_80.@SCRATCH1
+046     lcd_init.@SCRATCH1
+046     MAIN.@SCRATCH2
+046     @PSTRINGC7_80.@SCRATCH2
+047-048 setaRPM.rpm
+047     MAIN.@SCRATCH3
+047     @PSTRINGC7_80.@SCRATCH3
+048     MAIN.@SCRATCH4
+048     @PSTRINGC7_80.@SCRATCH4
+049-04C @SFTOI.P1
+049-04A @MUL1616.P2
+049-04C @MULFF.P3
+049-04C @DIVFF.P4
+049-04A @ITOF.P5
+049     setaRPM.@SCRATCH1
+04A     setaRPM.@SCRATCH2
+04B-04C retrocede.qtdPassos
+04B     @PSTRINGCN7_80.P1
+04B-04C @PRINTF_LU_80.P2
+04B-04C avanca.qtdPassos
+04B-04C @MUL1616.P1
+04C     @PSTRINGCN7_80.@SCRATCH1
+04D-04E avanca.passos
+04D-04E retrocede.passos
+04D-050 @MULFF.P1
+04D-050 @DIVFF.P2
+04D     @MUL1616.@SCRATCH1
+04D     @PRINTF_LU_80.@SCRATCH1
+04D     @PSTRINGCN7_80.@SCRATCH2
+04E     @PRINTF_LU_80.@SCRATCH2
+04E     @PSTRINGCN7_80.@SCRATCH3
+04F     avanca.@SCRATCH1
+04F     retrocede.@SCRATCH1
+04F     @PRINTF_LU_80.@SCRATCH3
+04F     @PSTRINGCN7_80.@SCRATCH4
+050     @PRINTF_LU_80.@SCRATCH4
+051     @MULFF.@SCRATCH1
+051     @PRINTF_LU_80.@SCRATCH5
+051     @DIVFF.@SCRATCH1
+052     @MULFF.@SCRATCH2
+052     @PRINTF_LU_80.@SCRATCH6
+052     @DIVFF.@SCRATCH2
+053     @MULFF.@SCRATCH3
+053     @PRINTF_LU_80.@SCRATCH7
+053     @DIVFF.@SCRATCH3
+054     lcd_putc.c
+054     @MULFF.@SCRATCH4
+054     @DIVFF.@SCRATCH4
+055     lcd_gotoxy.x
+055     @delay_ms1.P1
+055     @MULFF.@SCRATCH5
+055     @DIVFF.@SCRATCH5
+056     lcd_gotoxy.y
+056     @DIVFF.@SCRATCH6
+057     lcd_gotoxy.address
+058     lcd_gotoxy.@SCRATCH1
+059     lcd_send_byte.address
+05A     lcd_send_byte.n
+05B     lcd_send_byte.@SCRATCH1
+05C     lcd_send_nibble.nibble
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+0107  @delay_ms1
+0004  LCD_INIT_STRING
+011C  lcd_send_nibble
+0153  lcd_send_byte
+0182  lcd_init
+01CC  lcd_gotoxy
+01B5  lcd_putc
+0235  avanca
+0367  retrocede
+02FF  setaRPM
+001E  @ITOF
+026B  @MULFF
+02E0  @SFTOI
+000C  @const112
+03A2  @MUL1616
+03C3  @PRINTF_LU_80
+042E  @PSTRINGCN7_80
+0484  MAIN
+003B  @DIVFF
+0011  @const126
+01EA  @PSTRINGC7_80
+001A  @const128
+0484  @cinit1
+049A  @cinit2
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Administrador.JPAD227381\Downloads\Passo\Motor de passo\
+
+Project Files:
+    Passo.c                                                 [30-mar-16 08:24  CRC=2AF0B48D]
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h [28-fev-12 13:43  CRC=0E6649F1]
+    flex_lcd.c                                              [05-fev-15 08:07  CRC=12A5DE7E]
+
+Source signature=5EA2BB7A
+
+Units:
+    Passo (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      Passo.err
+    Ext Symbols: Passo.esym
+    INHX8:       Passo.hex
+    Symbols:     Passo.sym
+    List:        Passo.lst
+    Debug/COFF:  Passo.cof
+    Project:     Passo.PJT
+    Call Tree:   Passo.tre
+    Statistics:  Passo.STA

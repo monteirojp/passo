@@ -1,0 +1,68 @@
+
+ROM used: 1324 (16%)
+          1324 (16%) including unused fragments
+
+          2 Average locations per line
+          15 Average locations per statement
+
+RAM used: 46 (12%) at main() level
+          66 (18%) worst case
+
+Stack used: 4 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  141    44  50  Passo.c
+  330     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h
+  217    44  50  flex_lcd.c
+----- -----
+  688    88 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   2   1             @delay_ms1
+0      8   1   0             @const66
+0     55   4   1   326  2.8  lcd_send_nibble
+0     47   4   3   235  3.8  lcd_send_byte
+0     51   4   2   380  4.7  lcd_init
+ Inline        4   186  5.5  lcd_gotoxy
+0     53   4   1   275  3.9  lcd_putc
+0     54   4   5   262  5.3  avanca
+ Inline        5   262  5.3  retrocede
+0    389  29   4   239  4.4  setaRPM
+0     29   2   2             @ITOF
+0    117   9  13             @MULFF
+0     31   2   4             @SFTOI
+0      5   0   0             @const112
+ Inline        5             @MUL1616
+ Inline        9             @PRINTF_LU_80
+ Inline        5             @PSTRINGCN7_80
+0    168  13   4   479  4.6  MAIN
+0    204  15  14             @DIVFF
+0      9   1   0             @const126
+0     75   6   4             @PSTRINGC7_80
+0      4   0   0             @const128
+ Inline        0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              88
+    Comments                153
+    Volume (V)              4266
+    Difficulty (D)          37.9
+    Effort to implement (E) 161846
+    Time to implement (T)   2 hours, 30 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   15
+    Maintainability (MI)    107
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1320  724  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

@@ -1,67 +1,68 @@
 
-ROM used: 1447 (18%)
-          1447 (18%) including unused fragments
+ROM used: 1833 (22%)
+          1833 (22%) including unused fragments
 
-          2 Average locations per line
-          14 Average locations per statement
+          3 Average locations per line
+          19 Average locations per statement
 
-RAM used: 40 (11%) at main() level
-          58 (16%) worst case
+RAM used: 55 (15%) at main() level
+          77 (21%) worst case
 
-Stack used: 5 worst case (out of 8 total available)
+Stack used: 4 worst case (out of 8 total available)
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  167    56  56  Passo.c
+  172    54  55  Passo.c
   330     0   0  ..\..\..\..\..\Program Files (x86)\PICC\devices\16F877A.h
-  217    44  44  flex_lcd.c
+  217    44  45  flex_lcd.c
 ----- -----
-  714   100 Total
+  719    98 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     21   1   1             @delay_ms1
-0      8   1   0             @const66
-0     55   4   1   326  2.8  lcd_send_nibble
+0      8   0   0             @const66
+0     55   3   1   326  2.8  lcd_send_nibble
 0     47   3   3   235  3.8  lcd_send_byte
-0     51   4   2   380  4.7  lcd_init
+0     51   3   2   380  4.7  lcd_init
  Inline        4   186  5.5  lcd_gotoxy
-0     53   4   1   275  3.9  lcd_putc
-0     71   5   3   338  5.8  avanca
- Inline        5   377  5.8  retrocede
-0    211  15   4   239  4.4  setaRPM
+0     53   3   1   275  3.9  lcd_putc
+0    492  27   3   338  5.8  avanca
 0     29   2   2             @ITOF
-0    117   8  13             @MULFF
+ Inline       10             @FLT
+ Inline       16             @ADDFF
 0     31   2   4             @SFTOI
-0      5   0   0             @const112
-0     21   1   5             @MUL1616
-0     99   7   9             @PRINTF_LU_80
-0     84   6   5             @PSTRINGCN7_80
-0    200  14   4   558  3.8  MAIN
-0    204  14  14             @DIVFF
-0      9   1   0             @const126
-0     75   5   4             @PSTRINGC7_80
-0      4   0   0             @const128
-0     39   3   5             @DIV1616
-0      9   1   0             @const132
+ Inline        5   377  5.8  retrocede
+ Inline       13   377  5.8  @MULFF
+0    265  14   4   190  4.5  setaRPM
+0    231  13   2   529  3.7  MAIN
+0    202  11  14   310  2.6  @DIVFF
+0      9   0   0   190  4.5  @const127
+0     75   4   4   310  2.6  @PSTRINGC7_80
+0      4   0   0             @const129
+0     39   2   5             @DIV1616
+0      9   0   0             @const133
+0     23   1   5             @MUL1616
+0     99   5   9             @PRINTF_LU_80
+0     86   5   5             @PSTRINGCN7_80
  Inline        0             @cinit1
 
 Program metrics:
-    Functions               9
-    Statements              100
-    Comments                159
-    Volume (V)              4666
-    Difficulty (D)          38.0
-    Effort to implement (E) 177391
-    Time to implement (T)   2 hours, 44 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   16
-    Maintainability (MI)    110
+    Functions               13
+    Statements              98
+    Comments                164
+    Volume (V)              6852
+    Difficulty (D)          53.6
+    Effort to implement (E) 366944
+    Time to implement (T)   5 hours, 40 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   21
+    Maintainability (MI)    70
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF  1443  601  
+00004-007FF  1829  215  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
